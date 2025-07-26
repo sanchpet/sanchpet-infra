@@ -32,7 +32,7 @@ spec:
   values:
     global:
       image:
-        registry: 91.208.52.222:8080/k8s-proxy
+        registry: harbor.usa.proxy.sanch.pet/registry.k8s.io
     controller:
       service:
         type: "NodePort"
