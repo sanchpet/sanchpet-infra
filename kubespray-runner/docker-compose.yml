@@ -1,0 +1,9 @@
+services:
+  kubespray:
+    image: quay.io/kubespray/kubespray:v2.28.0
+    entrypoint: ["/bin/bash", "-i"]
+    stdin_open: true
+    tty: true
+    volumes:
+      - ./inventory/lab:/inventory
+      - ${HOME}/.ssh/:/root/.ssh/:ro
