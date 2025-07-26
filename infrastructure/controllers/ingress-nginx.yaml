@@ -34,7 +34,18 @@ spec:
       image:
         registry: harbor.usa.proxy.sanch.pet/registry.k8s.io
     controller:
+      hostPort:
+        enabled: true
       service:
-        type: "NodePort"
-    admissionWebhooks:
-      enabled: false
+        enabled: false
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+            - matchExpressions:
+              - key: node-role.conveyor.io
+                operator: In
+                values:
+                - ingress
+      metrics:
+        enabled: true
