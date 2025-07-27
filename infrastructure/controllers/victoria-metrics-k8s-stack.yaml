@@ -33,7 +33,7 @@ spec:
   values:
     victoria-metrics-operator:
       admissionWebhooks:
-        enable: false
+        enabled: false
     vmsingle:
       spec:
         retentionPeriod: "7d"
