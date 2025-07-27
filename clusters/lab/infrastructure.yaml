@@ -14,6 +14,12 @@ spec:
   path: ./infrastructure/controllers
   prune: true
   wait: true
+  postBuild:
+    substitute:
+      env: "sweb-lab"
+      cluster_name: "k8s-spaceweb"
+      cluster_subdomain: "k8s.sanch.pet"
+      cluster_subdomain_tls: "k8s-sanch-pet-tls"
 ---
 apiVersion: kustomize.toolkit.fluxcd.io/v1
 kind: Kustomization

@@ -3,3 +3,4 @@ kind: Kustomization
 resources:
   - ingress-nginx.yaml
   - cert-manager.yaml
+  - victoria-metrics-k8s-stack.yaml
