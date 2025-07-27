@@ -32,8 +32,13 @@ spec:
   releaseName: victoria-metrics-k8s-stack
   values:
     victoria-metrics-operator:
+      image:
+        registry: "docker.io"
       admissionWebhooks:
         enabled: false
+    kube-state-metrics:
+      image:
+        registry: harbor.usa.proxy.sanch.pet/registry.k8s.io
     vmsingle:
       spec:
         retentionPeriod: "7d"
