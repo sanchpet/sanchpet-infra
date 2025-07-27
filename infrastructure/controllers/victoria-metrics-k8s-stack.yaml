@@ -33,7 +33,7 @@ spec:
   values:
     victoria-metrics-operator:
       image:
-        registry: "docker.io"
+        repository: "docker.io/victoriametrics/operator"
       admissionWebhooks:
         enabled: false
     kube-state-metrics:
